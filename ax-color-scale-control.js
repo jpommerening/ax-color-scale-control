@@ -17,12 +17,12 @@ define( [
       return {
          restrict: 'A',
          replace: true,
-         template: '<ol class="ax-color-scale" style="display: none"><li class="ax-color-stop"></li></ol>';
+         template: '<ol class="ax-color-scale" style="display: none"><li class="ax-color-stop"></li></ol>',
          scope: {
             scale: '=' + directiveName
          },
          link: function( scope, iElement, iAttrs ) {
-            var base = element.find( '.ax-color-stop' );
+            var base = iElement.find( '.ax-color-stop' );
             var nocolor = getBackgroundColor( base[ 0 ] );
             var colors = [];
             var stop;
@@ -33,7 +33,7 @@ define( [
             for( i = 0; i < 10; i++ ) {
                stop = base.clone();
                stop.addClass( 'ax-color-stop-' + i );
-               element.append( stop );
+               iElement.append( stop );
                colors.unshift( getBackgroundColor( stop[ 0 ] ) );
 
                if( colors[ 0 ] === nocolor ) {

@@ -42,9 +42,9 @@ in the rest of your template.
 <!-- publish the color scale function as $scope.scale -->
 <span ax-color-scale="scale"></span>
 
-<!-- use the function to 
-<div ng-style="{ 'background-color': scale(value); }"
-     ng-repeat="value in [ 0, 0.25, 0.5, 0.75, 1 ]">
+<!-- use the function to get interpolated color values -->
+<div ng-repeat="value in [ 0, 0.25, 0.5, 0.75, 1 ]"
+     ng-style="{ 'background-color': scale(value); }">
   {{value}}
 </div>
 ```
