@@ -13,7 +13,7 @@ For general information on installing, styling and optimizing controls, have a l
 Install the control:
 
 ```sh
-bower install laxar-layer-control
+bower install laxar-color-scale-control
 ```
 
 Make sure that [`chroma-js`](https://github.com/gka/chroma.js) can be found by RequireJS.
