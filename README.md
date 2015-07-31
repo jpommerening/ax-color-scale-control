@@ -33,9 +33,10 @@ Now you may reference the control from the `widget.json` of your widget:
 ## Usage
 
 Place the control into you HTML template (it should not produce any visible artifacts).
-This will place a color scale function into the current `$scope`. The color scale function
-accepts values from zero to one and produces interpolated colors that you can use in the
-rest of your template.
+This will place a [color scale function](http://gka.github.io/chroma.js/#color-scales)
+into the current `$scope`. The color scale function accepts values from zero to one and
+produces interpolated [colors](http://gka.github.io/chroma.js/#chroma) that you can use
+in the rest of your template.
 
 ```html
 <!-- publish the color scale function as $scope.scale -->
@@ -48,10 +49,10 @@ rest of your template.
 </div>
 ```
 
-Without any CSS, this would interpolate between black and white. To create color stops with CSS
-all you need to do is define the CSS class `ax-color-stop-$n` where `$n` >= 0.
-The color scale control will then create hidden elements starting with `$n` = 0 and determine
-their background color as long as the background color is not `transparent`.
+Without any CSS, this would interpolate between black and white. To create color stops
+with CSS all you need to do is define the CSS class `ax-color-stop-$n` where `$n` >= 0.
+The color scale control will then create hidden elements starting with `$n` = 0 and
+determine their background color as long as the background color is not `transparent`.
 
 ```css
 // four color stops
