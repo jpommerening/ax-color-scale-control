@@ -40,7 +40,7 @@ in the rest of your template.
 
 ```html
 <!-- publish the color scale function as $scope.scale -->
-<span ax-color-scale-control="scale"></span>
+<span ax-color-scale="scale"></span>
 
 <!-- use the function to 
 <div ng-style="{ 'background-color': scale(value); }"
